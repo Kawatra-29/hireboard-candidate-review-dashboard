@@ -1,17 +1,21 @@
-# HireBoard – Candidate Review Dashboard
+# ⚡ HireBoard – Candidate Review Dashboard
 
-A production-grade internal hiring dashboard built with **Vite + React 18 + Tailwind CSS**.
+A production-grade internal hiring dashboard built with **Vite + React 18 + Tailwind CSS**, designed to help recruiters review, evaluate, and shortlist candidates efficiently.
 
-## Features
+---
 
-- 🗂 **Candidate Table** — searchable, filterable, sortable across 100 mock candidates
-- 🎯 **Priority Engine** — real-time weighted score → P0/P1/P2/P3
-- 📋 **Detail Drawer** — profile, assignment eval sliders, video eval sliders, timestamped notes
-- ⚖ **Comparison Mode** — side-by-side compare 2–3 candidates with best-score highlighting
-- 📊 **Summary Panel** — live stats: Total, Reviewed, Shortlisted, Pending
-- 🎨 **Color-coded priorities** — Green (P0), Yellow (P1), Orange (P2), Red (P3)
+## 📸 Features
 
-## Priority Formula
+- 🗂 **Candidate List** — Searchable, filterable, sortable table of 100 mock candidates
+- 🎯 **Real-time Priority Engine** — Auto-computes P0 / P1 / P2 / P3 using weighted scoring
+- 📋 **Candidate Detail Drawer** — Profile, scores, assignment eval, video eval, timestamped notes
+- ⚖ **Comparison Mode** — Side-by-side comparison of up to 3 candidates
+- 📊 **Summary Panel** — Live stats: Total, Reviewed, Shortlisted, Pending
+- 🎨 **Color-coded Priority** — 🟢 P0 · 🟡 P1 · 🟠 P2 · 🔴 P3
+
+---
+
+## 🧮 Priority Engine Formula
 
 | Dimension     | Weight |
 |---------------|--------|
@@ -21,23 +25,25 @@ A production-grade internal hiring dashboard built with **Vite + React 18 + Tail
 | GitHub        | 15%    |
 | Communication | 10%    |
 
-## Setup & Run
+| Score Range | Priority | Label                 |
+|-------------|----------|-----------------------|
+| ≥ 80        | P0       | Interview Immediately |
+| ≥ 65        | P1       | Strong Shortlist      |
+| ≥ 50        | P2       | Review Later          |
+| < 50        | P3       | Reject                |
 
-```bash
-npm install
-npm run dev
-```
+---
 
-App runs at `http://localhost:5173`
+## 🛠 Tech Stack
 
-## Build
+- [Vite](https://vitejs.dev/) — Lightning-fast build tool
+- [React 18](https://react.dev/) — UI library
+- [Tailwind CSS v3](https://tailwindcss.com/) — Utility-first styling
+- [DM Sans + DM Mono](https://fonts.google.com/) — Typography
 
-```bash
-npm run build
-npm run preview
-```
+---
 
-## Folder Structure
+## 📁 Folder Structure
 
 ```
 hire-vite/
@@ -46,6 +52,8 @@ hire-vite/
 ├── tailwind.config.js
 ├── postcss.config.js
 ├── package.json
+├── .gitignore
+├── README.md
 └── src/
     ├── main.jsx
     ├── index.css
@@ -68,3 +76,80 @@ hire-vite/
     └── utils/
         └── priority.js
 ```
+
+---
+
+## ⚙️ Setup Instructions
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/) — v18 or above
+- npm — comes with Node.js
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Kawatra-29/hireboard-candidate-review-dashboard
+cd hireboard-candidate-review-dashboard
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+---
+
+## ▶️ Run Steps
+
+### Development Server
+
+```bash
+npm run dev
+```
+
+App will be running at:
+
+```
+http://localhost:5173
+```
+
+### Production Build
+
+```bash
+npm run build
+```
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+---
+
+## 📦 Available Scripts
+
+| Script            | Description                    |
+|-------------------|--------------------------------|
+| `npm run dev`     | Start local development server |
+| `npm run build`   | Build for production           |
+| `npm run preview` | Preview the production build   |
+
+---
+
+## 📝 Notes
+
+- All candidate data is randomly generated locally — no external API required
+- Priority scores update in real-time when evaluation sliders are changed
+- Up to 3 candidates can be selected and compared simultaneously
+
+---
+
+## 👤 Author
+
+**Your Name**  
+GitHub: [@Kawatra-29](https://github.com/Kawatra-29)
